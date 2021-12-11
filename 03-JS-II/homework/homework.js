@@ -5,13 +5,17 @@ function obtenerMayor(x, y) {
   // Devuelve el número más grande
   // Si son iguales, devuelve cualquiera de los dos
   // Tu código:
+if (x > y) return x; else if (y > x) return y; 
+else if (x===y) return y||x; 
 }
 
 function mayoriaDeEdad(edad) {
   //Determinar si la persona según su edad puede ingresar a un evento.
   //Si tiene 18 años ó más, devolver --> "Allowed"
   //Si es menor, devolver --> "Not allowed"
-}
+if (edad >= 18) {return "allowed";} else {
+return "not allowed";}
+
   
 function conection(status) {
   //Recibimos un estado de conexión de un usuario representado por un valor numérico. 
@@ -19,6 +23,11 @@ function conection(status) {
   //Cuando el estado es igual a 2, el usuario está "Away"
   //De lo contrario, presumimos que el usuario está "Offline"
   //Devolver el estado de conexión de usuario en cada uno de los casos.
+if (status === 1) {return "online";} 
+else if (status === 2) {return "Away";}
+else {
+  return "offline";
+} 
 }
 
 function saludo(idioma) {
@@ -28,6 +37,15 @@ function saludo(idioma) {
   // Si "idioma" es "ingles", devuelve "Hello!"
   // Si "idioma" no es ninguno de los anteiores o es `undefined` devuelve "Hola!"
   // Tu código:
+  if (idioma === "aleman"){ 
+    return "Guten Tag!";
+  } else if (idioma === "mandarin") {
+    return "Ni Hao";
+  } else if (idioma === "ingles") {return "Hello"}
+    else {
+    return "Hola!";
+  }
+   
 }
 
 function colors(color) {
@@ -38,6 +56,7 @@ function colors(color) {
   //En caso que el color recibido sea "orange", devuleve --> "This is orange"
   //Caso default: devuelve --> "Color not found"
   //Usar el statement Switch.
+
 }
 
 function esDiezOCinco(numero) {
